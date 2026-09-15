@@ -5,10 +5,23 @@ const sesRegion = process.env.SES_REGION || "us-east-1";
 const sesClient = new SESClient({ region: sesRegion });
 
 export const handler = async (event) => {
-  // Only return Content-Type. AWS Function URL automatically injects CORS headers.
-  const headers = {
-    'Content-Type': 'application/json'
+  const method = event.requestContext?.http?.method || event.httpMethod;
+
+  const corsHeaders = {
+    'Content-Type': 'application/json',
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Methods': 'POST, OPTIONS, GET',
+    'Access-Control-Allow-Headers': '*'
   };
+
+  // 1. Immediately approve any browser CORS preflight check
+  if (method === 'OPTIONS') {
+    return {
+      statusCode: 200,
+      headers: corsHeaders,
+      body: JSON.stringify({ message: 'OK' })
+    };
+  }
 
   let body = {};
   try {
@@ -20,7 +33,7 @@ export const handler = async (event) => {
   } catch (parseErr) {
     return {
       statusCode: 400,
-      headers,
+      headers: corsHeaders,
       body: JSON.stringify({ error: 'Invalid JSON payload' })
     };
   }
@@ -29,7 +42,7 @@ export const handler = async (event) => {
   if (!name || !email || !company) {
     return {
       statusCode: 400,
-      headers,
+      headers: corsHeaders,
       body: JSON.stringify({ error: 'Missing required fields' })
     };
   }
@@ -38,7 +51,7 @@ export const handler = async (event) => {
   const senderEmail = process.env.FROM_EMAIL || "divyam@datacatalyst.in";
 
   try {
-    // 1. Alert email to Founder (Guaranteed to succeed since divyam@datacatalyst.in is verified)
+    // 2. Send Alert email to Founder (Guaranteed to succeed)
     const alertParams = {
       Source: `DataCatalyst Web Form <${senderEmail}>`,
       Destination: {
@@ -59,7 +72,7 @@ export const handler = async (event) => {
     };
     await sesClient.send(new SendEmailCommand(alertParams));
 
-    // 2. Confirmation email to Requester (protected against Sandbox restrictions)
+    // 3. Send Confirmation email to Requester (protected against sandbox blocks)
     try {
       const confirmationParams = {
         Source: `DataCatalyst <${senderEmail}>`,
@@ -81,19 +94,19 @@ export const handler = async (event) => {
       };
       await sesClient.send(new SendEmailCommand(confirmationParams));
     } catch (confErr) {
-      console.warn("Could not send confirmation to requester (SES Sandbox):", confErr.message);
+      console.warn("Could not send confirmation to requester (SES Sandbox limit):", confErr.message);
     }
 
     return {
       statusCode: 200,
-      headers,
+      headers: corsHeaders,
       body: JSON.stringify({ success: true })
     };
   } catch (err) {
     console.error("SES Send Error:", err);
     return {
       statusCode: 500,
-      headers,
+      headers: corsHeaders,
       body: JSON.stringify({ error: "Failed to send email", details: err.message })
     };
   }
