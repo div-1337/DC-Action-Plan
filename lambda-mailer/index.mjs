@@ -1,6 +1,8 @@
 import { SESClient, SendEmailCommand } from "@aws-sdk/client-ses";
 
-const sesClient = new SESClient({ region: process.env.AWS_REGION || "ap-south-1" });
+// Default to us-east-1 where SES identity is verified
+const sesRegion = process.env.SES_REGION || "us-east-1";
+const sesClient = new SESClient({ region: sesRegion });
 
 export const handler = async (event) => {
   const headers = {
