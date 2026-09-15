@@ -1,0 +1,9 @@
+{
+  "name": "datacatalyst-mailer-lambda",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.mjs",
+  "dependencies": {
+    "nodemailer": "^6.9.15"
+  }
+}

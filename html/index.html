@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <!-- Preload LCP Hero Image -->
+    <link rel="preload" as="image" href="assets/images/hero_banner.webp" type="image/webp" fetchpriority="high">
+
+    <link rel="icon" type="image/png" href="/assets/images/datacatalyst-logo-linkedin.png" />
+  <!-- Security -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' https://api.fontshare.com https://fonts.googleapis.com https://fonts.gstatic.com; img-src 'self' data: blob: https:; connect-src 'self';">
+  <!-- Font preconnect -->
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DataCatalyst — Premium Hindi Speech Datasets for AI/ML</title>
+  <meta name="description" content="Enterprise-grade Hindi conversational audio datasets with ground truth transcriptions, speaker separation, and explicit consent. Built for AI/ML speech model training.">
+  <meta property="og:title" content="DataCatalyst — Premium Hindi Speech Datasets">
+  <meta property="og:description" content="48kHz speaker-separated audio with <10% WER transcriptions. Exclusive & non-exclusive licensing for enterprise AI teams.">
+  <meta property="og:type" content="website">
+  <!-- Async Non-blocking Fontshare Fonts -->
+    <link rel="preload" as="style" href="https://api.fontshare.com/v2/css?f[]=general-sans@300,400,500,600,700&f[]=cabinet-grotesk@400,500,700,800,900&display=swap">
+    <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=general-sans@300,400,500,600,700&f[]=cabinet-grotesk@400,500,700,800,900&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=general-sans@300,400,500,600,700&f[]=cabinet-grotesk@400,500,700,800,900&display=swap"></noscript>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to content</a>
+
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="container-wide nav-inner">
+    <a href="#" class="nav-logo" aria-label="DataCatalyst home">
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+        <circle cx="18" cy="18" r="17" fill="oklch(from var(--color-primary) l c h / 0.15)" stroke="var(--color-primary)" stroke-width="1.2"/>
+        <rect x="7" y="15" width="3" height="6" rx="1.5" fill="var(--color-primary)" opacity="0.5"/>
+        <rect x="12" y="11" width="3" height="14" rx="1.5" fill="var(--color-primary)" opacity="0.75"/>
+        <rect x="17" y="8" width="3" height="20" rx="1.5" fill="var(--color-primary)"/>
+        <rect x="22" y="11" width="3" height="14" rx="1.5" fill="var(--color-primary)" opacity="0.75"/>
+        <rect x="27" y="15" width="3" height="6" rx="1.5" fill="var(--color-primary)" opacity="0.5"/>
+      </svg>
+      <span class="nav-logo-text">Data<span>Catalyst</span></span>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="#offerings" onclick="event.preventDefault();document.getElementById('offerings').scrollIntoView({behavior:'smooth'})">Datasets</a></li>
+      <li><a href="#specs">Specs</a></li>
+      <li><a href="#licensing">Licensing</a></li>
+      <li><a href="#custom">Custom Build</a></li>
+      <li><a href="#consent">Consent</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" data-theme-toggle aria-label="Switch to light mode" title="Toggle theme">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <a href="#request-sample" class="btn btn-primary btn-sm">Request Sample</a>
+    </div>
+  </div>
+</nav>
+
+<main id="main">
+
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="hero-bg">
+      <div class="hero-bg-grid"></div>
+      <div class="hero-glow"></div>
+    </div>
+    <div class="container" style="width:100%">
+      <div class="hero-content">
+        <div class="hero-eyebrow">
+          <div class="hero-badge"><div class="hero-badge-dot"></div>Now accepting enterprise inquiries</div>
+        </div>
+        <h1 class="hero-title" id="hero-heading">Premium Indian<br>Speech Data for<br><em>AI That Understands.</em></h1>
+        <p class="hero-desc">Enterprise-grade Indian speech datasets for ASR, TTS, and Diarization training — verbatim &amp; ground truth transcribed, speaker-separated, diarized, and fully consented. Built for teams who cannot afford noise in training data.</p>
+        <div class="hero-ctas">
+          <a href="#request-sample" class="btn btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Request a Free Sample
+          </a>
+          <a href="#offerings" class="btn btn-ghost">Explore Datasets</a>
+        </div>
+        <div class="waveform-visual" aria-hidden="true"></div>
+        <div class="hero-stats">
+          <div class="stat-item"><div class="stat-value">48 kHz</div><div class="stat-label">Sample Rate</div></div>
+          <div class="stat-item"><div class="stat-value">&lt;10%</div><div class="stat-label">WER / CER Guaranteed</div></div>
+          <div class="stat-item"><div class="stat-value">50+</div><div class="stat-label">Speakers (scalable)</div></div>
+          <div class="stat-item"><div class="stat-value">100%</div><div class="stat-label">Consented &amp; PII Redacted</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <section id="offerings" aria-labelledby="offerings-heading">
+    <div class="container">
+      <div class="fade-in">
+        <span class="label">What We Provide</span>
+        <h2 class="section-title" id="offerings-heading" style="margin-top:var(--space-3)">Everything your model needs to train on real speech.</h2>
+        <p class="section-sub">Every dataset ships as a complete package — raw audio, verbatim &amp; ground truth transcriptions, rich metadata, and speaker diarization. Nothing is missing.</p>
+      </div>
+      <div class="offerings-grid">
+
+        <div class="offering-card fade-in">
+          <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v3M8 22h8"/></svg>
+          <h3>Conversational Audio</h3>
+          <p>Natural 2-speaker dialogues and read speech, recorded under VoIP conditions (WebRTC + dynamic mic). Both spontaneous conversations and scripted read-speech formats available — matched to your training requirements.</p>
+        </div>
+
+        <div class="offering-card fade-in">
+          <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          <h3>Ground Truth &amp; Verbatim Transcriptions</h3>
+          <p>Every dataset includes both verbatim transcriptions (every word exactly as spoken, including fillers and disfluencies) and clean ground truth transcriptions (&lt;10% WER/CER guaranteed) — giving your model both raw realism and verified accuracy.</p>
+        </div>
+
+        <div class="offering-card fade-in">
+          <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07M8.46 8.46a5 5 0 0 0 0 7.07"/></svg>
+          <h3>Speaker Separation &amp; Diarization</h3>
+          <p>Each recording is delivered as individual speaker tracks and a merged conversation file, with full diarization metadata — who spoke when, turn-level timestamps, and non-speaking gaps preserved. Ready for ASR, diarization, and dialogue model training.</p>
+        </div>
+
+        <div class="offering-card fade-in">
+          <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          <h3>Rich Metadata</h3>
+          <p>Recording conditions, speaker profiles, domain tags, and session context included. Structured for direct ingestion into ML pipelines — no preprocessing overhead.</p>
+        </div>
+
+        <div class="offering-card featured fade-in">
+          <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <h3>Explicit Contributor Consent</h3>
+          <p>Every recording is covered by documented, explicit consent for AI training use. PII fully redacted. Legally clean for commercial model deployment globally.</p>
+        </div>
+
+        <div class="offering-card fade-in">
+          <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <h3>Domain Customisation</h3>
+          <p>Need data in healthcare, finance, e-commerce, or a niche vertical? We build domain-specific datasets to your specification — scripted or spontaneous formats.</p>
+        </div>
+
+        <!-- NLU Annotation — Coming Soon -->
+        <div class="offering-card coming-soon fade-in" aria-label="NLU Annotation — Coming Soon">
+          <span class="coming-soon-badge">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            Coming Soon
+          </span>
+          <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          <h3>NLU Annotation</h3>
+          <p>Intent labeling and slot tagging on top of transcriptions — turning raw speech into fully annotated, NLU-ready training sets for dialogue AI and voicebot teams.</p>
+        </div>
+
+      </div>
+
+      <div class="lang-banner fade-in">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 8l6 6"/><path d="M4 14l6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="M22 22l-5-10-5 10"/><path d="M14 18h6"/></svg>
+        <span><strong>Currently available:</strong></span>
+        <span class="lang-tag">Hindi</span>
+        <span style="color:var(--color-text-muted);font-size:var(--text-xs)">Scaling to more Indian languages. Custom language builds available on request.</span>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="section-divider"></div>
+
+  <section id="use-cases" aria-labelledby="use-cases-heading">
+    <div class="container">
+      <div class="fade-in">
+        <span class="label">Use Cases</span>
+        <h2 class="section-title" id="use-cases-heading">Built for every voice AI workload.</h2>
+        <p class="section-sub">One Gold-Standard package. Three fully supported training verticals — and one on the way.</p>
+      </div>
+
+      <div class="use-cases-grid fade-in">
+
+        <div class="use-case-card">
+          <div class="use-case-header">
+            <svg class="use-case-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+            <div>
+              <h3 class="use-case-title">ASR Training</h3>
+              <span class="use-case-badge supported">Fully Supported</span>
+            </div>
+          </div>
+          <p class="use-case-desc">Train automatic speech recognition models on real conversational and read-speech Hindi audio. Ground truth transcriptions guarantee &lt;10% WER/CER out of the box.</p>
+          <ul class="use-case-list" role="list">
+            <li>Raw audio — 48kHz, 16-bit, mono</li>
+            <li>Verbatim + ground truth transcriptions</li>
+            <li>Speaker metadata &amp; domain tags</li>
+            <li>Turn-level diarization timestamps</li>
+          </ul>
+        </div>
+
+        <div class="use-case-card">
+          <div class="use-case-header">
+            <svg class="use-case-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+            <div>
+              <h3 class="use-case-title">TTS Training</h3>
+              <span class="use-case-badge supported">Fully Supported</span>
+            </div>
+          </div>
+          <p class="use-case-desc">Build natural-sounding Hindi voice synthesis models with consistent single-speaker read-speech recordings, clean ground truth text, and speaker-level acoustic metadata.</p>
+          <ul class="use-case-list" role="list">
+            <li>Read-speech audio per speaker</li>
+            <li>Clean ground truth transcription</li>
+            <li>Speaker profile — age, gender, accent</li>
+            <li>Consistent recording conditions per session</li>
+          </ul>
+        </div>
+
+        <div class="use-case-card">
+          <div class="use-case-header">
+            <svg class="use-case-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="9" cy="7" r="4"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/><circle cx="19" cy="7" r="2"/><path d="M23 21v-1a3 3 0 0 0-2-2.83"/></svg>
+            <div>
+              <h3 class="use-case-title">Speaker Diarization</h3>
+              <span class="use-case-badge supported">Fully Supported</span>
+            </div>
+          </div>
+          <p class="use-case-desc">Train or fine-tune diarization models with labelled 2-speaker conversational audio. Every file ships with who-spoke-when timestamps, separated speaker tracks, and a merged conversation file.</p>
+          <ul class="use-case-list" role="list">
+            <li>2-speaker dialogues with speaker labels</li>
+            <li>Separated per-speaker tracks</li>
+            <li>Turn-level start &amp; end timestamps</li>
+            <li>Merged conversation file included</li>
+          </ul>
+        </div>
+
+        <div class="use-case-card coming-soon-card">
+          <div class="use-case-header">
+            <svg class="use-case-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            <div>
+              <h3 class="use-case-title">NLU &amp; Annotation</h3>
+              <span class="use-case-badge coming-soon-badge">Coming Soon</span>
+            </div>
+          </div>
+          <p class="use-case-desc">Intent labels, entity tagging, and domain-specific annotation layers on top of our existing transcribed audio. Built for conversational AI, voice assistants, and dialogue systems.</p>
+          <ul class="use-case-list" role="list">
+            <li>Intent classification per utterance</li>
+            <li>Entity tagging — locations, names, numbers</li>
+            <li>Domain vocabulary coverage</li>
+            <li>Verbatim base layer included</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <section id="specs" aria-labelledby="specs-heading">
+    <div class="container">
+      <div class="fade-in">
+        <span class="label">Technical Specifications</span>
+        <h2 class="section-title" id="specs-heading" style="margin-top:var(--space-3)">Studio-quality parameters. Production-ready format.</h2>
+        <p class="section-sub">Every dataset is recorded, processed, and delivered to exact specifications. No guesswork on your end.</p>
+      </div>
+      <div class="specs-layout">
+        <div class="spec-block fade-in">
+          <div class="spec-block-header">Audio Format</div>
+          <ul class="spec-list" role="list">
+            <li><span class="spec-key">Sample Rate</span><span class="spec-val accent">48,000 Hz</span></li>
+            <li><span class="spec-key">Bit Depth</span><span class="spec-val">16-bit PCM</span></li>
+            <li><span class="spec-key">Channel</span><span class="spec-val">Mono (speaker-separated)</span></li>
+            <li><span class="spec-key">Frequency Range</span><span class="spec-val">14–16 kHz</span></li>
+            <li><span class="spec-key">Recording Method</span><span class="spec-val">VoIP (WebRTC + Dynamic Mic)</span></li>
+            <li><span class="spec-key">Noise Handling</span><span class="spec-val">Real-world conditions preserved</span></li>
+          </ul>
+        </div>
+        <div class="spec-block fade-in">
+          <div class="spec-block-header">Dataset Properties</div>
+          <ul class="spec-list" role="list">
+            <li><span class="spec-key">Language</span><span class="spec-val accent">Hindi (Scaling)</span></li>
+            <li><span class="spec-key">Conversation Type</span><span class="spec-val">2-speaker dialogues</span></li>
+            <li><span class="spec-key">Speaker Pool</span><span class="spec-val">10 → 50+ within 1 week</span></li>
+            <li><span class="spec-key">Transcription WER/CER</span><span class="spec-val accent">&lt;10% guaranteed</span></li>
+            <li><span class="spec-key">PII Redaction</span><span class="spec-val">Full — all recordings</span></li>
+            <li><span class="spec-key">Quality Control</span><span class="spec-val">Full QC completed</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <section id="licensing" aria-labelledby="licensing-heading">
+    <div class="container">
+      <div class="fade-in">
+        <span class="label">Licensing Options</span>
+        <h2 class="section-title" id="licensing-heading" style="margin-top:var(--space-3)">Own it outright, or share the pool.</h2>
+        <p class="section-sub">Choose how you access the data based on your competitive requirements and budget.</p>
+      </div>
+      <div class="licensing-grid">
+        <div class="license-card fade-in">
+          <span class="license-badge" style="background:var(--color-surface-dynamic);color:var(--color-text);">Non-Exclusive</span>
+          <h3 class="license-title">Shared Access</h3>
+          <p class="license-desc">Access our standard dataset catalog. Ideal for research, benchmarking, or teams beginning to fine-tune Hindi speech models.</p>
+          <ul class="license-features" role="list">
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Full transcriptions &amp; metadata included</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Speaker-separated, 48kHz audio</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Consented for commercial AI training</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Shared licensing — other teams may also purchase</li>
+          </ul>
+        </div>
+        <div class="license-card featured fade-in">
+          <span class="license-badge">Exclusive</span>
+          <h3 class="license-title">Full Ownership</h3>
+          <p class="license-desc">Your dataset is recorded and reserved solely for you. No other party receives access to that data. Maximum competitive advantage.</p>
+          <ul class="license-features" role="list">
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Exclusive rights — not sold to anyone else</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Custom domain, speakers &amp; format</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Full metadata &amp; scripted variants available</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Priority delivery &amp; dedicated support</li>
+          </ul>
+        </div>
+      </div>
+      <p class="fade-in" style="margin-top:var(--space-8);font-size:var(--text-sm);color:var(--color-text-muted);max-width:60ch;">
+        All licensing includes explicit contributor consent documentation. Pricing is volume-based — <a href="#request-sample" style="color:var(--color-primary);text-decoration:none;">contact us</a> with your hourly requirements for a quote.
+      </p>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <section id="custom" aria-labelledby="custom-heading">
+    <div class="container">
+      <div class="custom-build fade-in">
+        <div class="custom-build-inner">
+          <div class="custom-build-text">
+            <span class="label">Custom Dataset Build</span>
+            <h2 id="custom-heading">We build the data your use case actually needs.</h2>
+            <p>Don't compromise by adapting your model to generic datasets. Describe your domain, speaker demographics, conversation styles, and volume — we'll build a dataset precisely matched to your training requirements, complete with transcription and metadata.</p>
+            <ul class="license-features" role="list" style="gap:var(--space-3)">
+              <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Domain-specific: healthcare, finance, e-commerce, telecom &amp; more</li>
+              <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Custom speaker demographics &amp; accent distribution</li>
+              <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Scripted or spontaneous conversation formats</li>
+              <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Scale to 50 speakers within one week, quality unchanged</li>
+              <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Delivered with ground truth transcriptions &amp; full metadata</li>
+            </ul>
+            <div style="margin-top:var(--space-8)"><a href="#request-sample" class="btn btn-primary">Start a Custom Build</a></div>
+          </div>
+          <div class="custom-build-steps">
+            <h3>How It Works</h3>
+            <ol class="step-list" role="list">
+              <li class="step-item"><div class="step-num" aria-hidden="true">1</div><div class="step-text"><strong>Share your requirements</strong> — domain, speaker count, accent type, conversation format, and volume.</div></li>
+              <li class="step-item"><div class="step-num" aria-hidden="true">2</div><div class="step-text"><strong>We scope and quote</strong> — a clear breakdown of timeline, cost, and deliverables within 48 hours.</div></li>
+              <li class="step-item"><div class="step-num" aria-hidden="true">3</div><div class="step-text"><strong>Recording &amp; QC</strong> — speakers are briefed, recordings made, and each file passes full quality control.</div></li>
+              <li class="step-item"><div class="step-num" aria-hidden="true">4</div><div class="step-text"><strong>Transcription &amp; metadata</strong> — human-verified transcriptions (&lt;10% WER/CER) and structured metadata generated.</div></li>
+              <li class="step-item"><div class="step-num" aria-hidden="true">5</div><div class="step-text"><strong>Delivery</strong> — dataset packaged and delivered securely, with consent documentation included.</div></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <section id="consent" aria-labelledby="consent-heading">
+    <div class="container">
+      <div class="fade-in">
+        <span class="label">Why Consent Matters</span>
+        <h2 class="section-title" id="consent-heading" style="margin-top:var(--space-3)">Clean data starts with clean consent.</h2>
+        <p class="section-sub">As AI regulations tighten globally — EU AI Act, India's DPDP — provenance and consent documentation are no longer optional. Every DataCatalyst dataset is legally clean from day one.</p>
+      </div>
+      <div class="consent-grid">
+        <div class="consent-visual fade-in">
+          <p style="font-size:var(--text-sm);font-weight:600;margin-bottom:var(--space-6);">Consent &amp; Compliance Chain</p>
+          <div class="consent-chain">
+            <div class="consent-node">
+              <div class="consent-icon-wrap" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+              <div class="consent-node-text"><strong>Informed Contributor</strong><span>Speaker is briefed on purpose: AI/ML speech training use. No ambiguity on intended use.</span></div>
+            </div>
+            <div class="consent-node">
+              <div class="consent-icon-wrap" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/></svg></div>
+              <div class="consent-node-text"><strong>Written Explicit Consent</strong><span>Signed consent form covering commercial AI training — not generic media release.</span></div>
+            </div>
+            <div class="consent-node">
+              <div class="consent-icon-wrap" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+              <div class="consent-node-text"><strong>PII Redaction</strong><span>All personally identifiable information removed from audio and transcription before delivery.</span></div>
+            </div>
+            <div class="consent-node">
+              <div class="consent-icon-wrap" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <div class="consent-node-text"><strong>Compliance Documentation</strong><span>Consent records retained and provided with every dataset delivery. Audit-ready.</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="fade-in">
+          <ul class="consent-points" role="list">
+            <li><span class="label" style="margin-top:var(--space-1)">IP</span><div class="consent-point-body"><strong>No copyright exposure</strong><span>Explicit AI training consent means your models can't be challenged on IP grounds from the data side — unlike scraped or third-party aggregated datasets.</span></div></li>
+            <li><span class="label" style="margin-top:var(--space-1)">Legal</span><div class="consent-point-body"><strong>Regulatory alignment</strong><span>The EU AI Act and India's DPDP Act require traceable consent for training data in high-risk AI systems. Our datasets are designed to satisfy those requirements.</span></div></li>
+            <li><span class="label" style="margin-top:var(--space-1)">Quality</span><div class="consent-point-body"><strong>Better data, not just safer data</strong><span>Consented speakers follow controlled protocols. Recording conditions are documented. You get consistent, reproducible quality — not scraped noise.</span></div></li>
+            <li><span class="label" style="margin-top:var(--space-1)">Trust</span><div class="consent-point-body"><strong>Deploying with confidence</strong><span>Enterprises deploying voice AI in consumer products face scrutiny. Clean provenance at the data layer protects you from legal and reputational risk downstream.</span></div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <section id="founder" aria-labelledby="founder-heading">
+    <div class="container">
+      <div class="fade-in">
+        <span class="label">Founded By</span>
+        <h2 class="section-title" id="founder-heading" style="margin-top:var(--space-3)">A human behind every dataset.</h2>
+        <p class="section-sub">DataCatalyst is a focused, founder-led operation — which means every dataset is built with direct accountability, not anonymised through layers of vendors.</p>
+      </div>
+      <div class="founder-section fade-in" style="margin-top:var(--space-10)">
+        <div class="founder-inner">
+          <div class="founder-avatar-col">
+            <img
+              src="assets/images/hero_banner.webp" fetchpriority="high" decoding="async"
+              alt="Divyam Bhatia, Founder of DataCatalyst"
+              width="120" height="120"
+              loading="lazy"
+              style="width:120px;height:120px;border-radius:50%;object-fit:cover;object-position:center top;
+                     border:2px solid oklch(from var(--color-primary) l c h / 0.4);display:block;flex-shrink:0;"
+            />
+          </div>
+          <div class="founder-body">
+            <h3 class="founder-name">Divyam Bhatia</h3>
+            <p class="founder-title">Founder &amp; CEO, DataCatalyst.in</p>
+            <p class="founder-bio">
+              Divyam founded DataCatalyst to solve a problem he saw firsthand — the absence of high-quality, legally clean Hindi speech data for AI teams that need it most. Today, DataCatalyst delivers enterprise-grade conversational audio datasets with verified transcriptions, speaker separation, and explicit contributor consent. Every dataset ships under his direct oversight, with a standing commitment to &lt;10% WER accuracy and full compliance documentation.
+            </p>
+            <div class="founder-links">
+              <a href="https://www.linkedin.com/in/bhatia-divyam/" target="_blank" rel="noopener noreferrer" class="founder-link linkedin" aria-label="Divyam Bhatia on LinkedIn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                LinkedIn
+              </a>
+              <a href="mailto:hello@datacatalyst.in" class="founder-link" aria-label="Email DataCatalyst">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                hello@datacatalyst.in
+              </a>
+              <a href="https://datacatalyst.in" target="_blank" rel="noopener noreferrer" class="founder-link" aria-label="DataCatalyst website">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                datacatalyst.in
+              </a>
+            </div>
+            <div class="dc-linkedin-row">
+              <a href="https://www.linkedin.com/company/datacatalyst-tech" target="_blank" rel="noopener noreferrer" class="dc-linkedin-card" aria-label="DataCatalyst on LinkedIn">
+                <img src="/assets/images/datacatalyst-logo-linkedin.png" alt="DataCatalyst" class="dc-linkedin-logo" width="44" height="44" loading="lazy">
+                <div class="dc-linkedin-info">
+                  <span class="dc-linkedin-name">DataCatalyst</span>
+                  <span class="dc-linkedin-meta">Speech Data for AI &middot; India</span>
+                </div>
+                <span class="dc-linkedin-follow">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                  Follow
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <section id="request-sample" aria-labelledby="form-heading">
+    <div class="container">
+      <div class="form-section fade-in">
+        <div class="form-inner">
+          <div class="form-info">
+            <span class="label">Free Sample</span>
+            <h2 id="form-heading">Hear the quality before you commit.</h2>
+            <p>Request a free sample — a representative slice of our audio including 2-speaker dialogues, verbatim and ground truth transcriptions, speaker diarization, and full metadata. Evaluate the quality yourself before committing.</p>
+            <ul class="form-guarantees" role="list">
+              <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>2-speaker dialogues — separated tracks + merged conversation file</li>
+              <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Ground truth transcription — human-verified, &lt;10% WER/CER</li>
+              <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Verbatim transcription — every utterance captured exactly as spoken</li>
+              <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Speaker diarization — who spoke when, with turn-level timestamps</li>
+              <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>48kHz, 16-bit mono, fully QC'd audio</li>
+              <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Response within 48 hours — no commitment required</li>
+            </ul>
+          </div>
+          <div class="form-panel">
+            <h3>Request a Sample</h3>
+            <form class="form" id="sample-form" novalidate>
+              <div class="form-group"><label for="name">Full Name</label><input type="text" id="name" name="name" placeholder="Your name" required autocomplete="name"></div>
+              <div class="form-group"><label for="email">Work Email</label><input type="email" id="email" name="email" placeholder="you@company.com" required autocomplete="email"></div>
+              <div class="form-group"><label for="company">Company / Organisation</label><input type="text" id="company" name="company" placeholder="Company name" required></div>
+              <div class="form-group">
+                <label for="use-case">Primary Use Case</label>
+                <select id="use-case" name="use_case">
+                  <option value="">Select…</option>
+                  <option value="asr">ASR / Speech Recognition</option>
+                  <option value="tts">TTS / Text-to-Speech</option>
+                  <option value="diarization">Speaker Diarization</option>
+                  <option value="research">Academic / Research</option>
+                  <option value="nlu" disabled>NLU / Annotation (Coming Soon)</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="volume">Estimated Volume Needed</label>
+                <select id="volume" name="volume">
+                  <option value="">Select…</option>
+                  <option value="lt10">Less than 10 hours</option>
+                  <option value="10-50">10–50 hours</option>
+                  <option value="50-200">50–200 hours</option>
+                  <option value="200+">200+ hours</option>
+                  <option value="custom">Custom / Not sure</option>
+                </select>
+              </div>
+              <div class="form-group"><label for="notes">Additional Requirements (optional)</label><textarea id="notes" name="notes" placeholder="Domain, accent preferences, custom build requirements…"></textarea></div>
+              <div class="form-submit-wrap">
+                <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
+                  Send Request
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                </button>
+              </div>
+              <div class="form-success" style="text-align:center;padding:var(--space-8)" id="form-success" role="alert">
+<div class="tick-wrap">
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle class="tick-circle" cx="40" cy="40" r="38" fill="#FFC107" fill-opacity="0.15" stroke="#FFC107" stroke-width="3"/>
+<polyline class="tick-path" points="24,42 35,53 56,28" stroke="#FFC107" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+</div>
+<div class="success-text">
+<p style="font-size:var(--text-lg);font-weight:700;margin-bottom:var(--space-2);color:#FFC107">Request Received!</p>
+<p style="color:var(--color-text-muted)">We'll be in touch within 48 hours.</p>
+</div>
+</div>
+              <p class="form-note">Your details are used only to process your sample request. We do not share data with third parties.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer role="contentinfo">
+  <div class="container-wide footer-inner">
+    <div>
+      <a href="#" class="nav-logo" style="text-decoration:none;">
+        <svg width="28" height="28" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+          <circle cx="18" cy="18" r="17" fill="oklch(from var(--color-primary) l c h / 0.12)" stroke="var(--color-primary)" stroke-width="1.2"/>
+          <rect x="7" y="15" width="3" height="6" rx="1.5" fill="var(--color-primary)" opacity="0.5"/>
+          <rect x="12" y="11" width="3" height="14" rx="1.5" fill="var(--color-primary)" opacity="0.75"/>
+          <rect x="17" y="8" width="3" height="20" rx="1.5" fill="var(--color-primary)"/>
+          <rect x="22" y="11" width="3" height="14" rx="1.5" fill="var(--color-primary)" opacity="0.75"/>
+          <rect x="27" y="15" width="3" height="6" rx="1.5" fill="var(--color-primary)" opacity="0.5"/>
+        </svg>
+        <span class="nav-logo-text" style="font-size:var(--text-base)">Data<span>Catalyst</span></span>
+      </a>
+      <p class="footer-tagline">Premium speech datasets for India's AI future.</p>
+      <p class="footer-tagline" style="margin-top:var(--space-1)">Sri Ganganagar, Rajasthan, India</p>
+    </div>
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="#offerings" onclick="event.preventDefault();document.getElementById('offerings').scrollIntoView({behavior:'smooth'})">Datasets</a>
+      <a href="#specs">Specifications</a>
+      <a href="#licensing">Licensing</a>
+      <a href="#custom">Custom Build</a>
+      <a href="#consent">Consent Policy</a>
+    </nav>
+    <div class="footer-contact">
+      <p>Enterprise inquiries</p>
+      <a href="mailto:hello@datacatalyst.in">hello@datacatalyst.in</a><br><br>
+      <p>Support</p>
+      <a href="mailto:support@datacatalyst.in">support@datacatalyst.in</a>
+    </div>
+  </div>
+  <div class="container-wide" style="margin-top:var(--space-8);padding-top:var(--space-6);border-top:1px solid var(--color-divider);">
+    <p style="font-size:var(--text-xs);color:var(--color-text-faint);">© 2026 DataCatalyst.in. All rights reserved. Jurisdiction: Rajasthan, India.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const t=document.querySelector('[data-theme-toggle]'),r=document.documentElement;
+  let d=r.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');
+  r.setAttribute('data-theme',d);
+  function updateIcon(){if(!t)return;t.setAttribute('aria-label','Switch to '+(d==='dark'?'light':'dark')+' mode');t.innerHTML=d==='dark'?'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>':'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';}
+  updateIcon();
+  if(t)t.addEventListener('click',function(){d=d==='dark'?'light':'dark';r.setAttribute('data-theme',d);updateIcon();});
+})();
+document.addEventListener('DOMContentLoaded',function(){
+  var wf=document.querySelector('.waveform-visual');
+  if(wf){var h=[20,35,55,70,85,100,88,72,90,100,78,60,88,100,92,76,95,100,80,65,50,38,25,18,30,48,65,80,95,100,82,65,48,32,20];h.forEach(function(v,i){var b=document.createElement('div');b.className='wave-bar';b.style.height=v+'%';b.style.animationDelay=(i*0.04)+'s';wf.appendChild(b);});}
+  var form=document.getElementById('sample-form'),success=document.getElementById('form-success');
+  if(form){form.addEventListener('submit',function(e){e.preventDefault();var n=form.querySelector('#name').value.trim(),em=form.querySelector('#email').value.trim(),co=form.querySelector('#company').value.trim();if(!n||!em||!co){alert('Please fill in your name, email, and company.');return;}var btn=form.querySelector('[type="submit"]');btn.disabled=true;btn.innerHTML='<span class="btn-spinner"></span>Sending…';fetch('/send',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:n,email:em,company:co,use_case:(form.querySelector('#use-case')||{value:'Not specified'}).value,volume:(form.querySelector('#volume')||{value:'Not specified'}).value,notes:(form.querySelector('#notes')||{value:''}).value.trim()})}).then(function(r){return r.json();}).then(function(data){if(data.success){form.querySelectorAll('.form-group,.form-submit-wrap,.form-note').forEach(function(el){el.style.display='none';});success.style.display='block';var c=success.querySelector('.tick-circle'),p=success.querySelector('.tick-path'),t=success.querySelector('.success-text');if(c){c.style.animation='none';p.style.animation='none';if(t)t.style.animation='none';void success.offsetWidth;c.style.animation='circle-pop .5s cubic-bezier(.34,1.56,.64,1) forwards';p.style.animation='tick-draw .4s ease forwards .4s';if(t)t.style.animation='fade-up .4s ease forwards .6s';}}else{btn.disabled=false;btn.textContent='Send Request';alert('Something went wrong. Please email us directly.');}}).catch(function(){btn.disabled=false;btn.textContent='Send Request';alert('Something went wrong. Please email us directly.');});});}
+});
+</script>
+<script>
+window.addEventListener("load", function(){
+  document.querySelectorAll("a[href^='#']").forEach(function(a){
+    a.addEventListener("click", function(e){
+      e.preventDefault();
+      var id = this.getAttribute("href").substring(1);
+      var t = document.getElementById(id);
+      if(t) t.scrollIntoView({behavior: "smooth"});
+    });
+  });
+});
+</script></body>
+</html>
