@@ -2,9 +2,10 @@ version: 1
 frontend:
   phases:
     build:
-      commands: []
+      commands:
+        - echo "Deploying DataCatalyst static site"
   artifacts:
-    baseDirectory: html
+    baseDirectory: .
     files:
       - '**/*'
   cache:
