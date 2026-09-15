@@ -5,21 +5,10 @@ const sesRegion = process.env.SES_REGION || "us-east-1";
 const sesClient = new SESClient({ region: sesRegion });
 
 export const handler = async (event) => {
+  // Only return Content-Type. AWS Function URL automatically injects CORS headers.
   const headers = {
-    'Content-Type': 'application/json',
-    'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Methods': 'POST, OPTIONS',
-    'Access-Control-Allow-Headers': 'Content-Type'
+    'Content-Type': 'application/json'
   };
-
-  // Handle preflight OPTIONS request
-  if (event.requestContext?.http?.method === 'OPTIONS' || event.httpMethod === 'OPTIONS') {
-    return {
-      statusCode: 200,
-      headers,
-      body: JSON.stringify({ message: 'OK' })
-    };
-  }
 
   let body = {};
   try {
