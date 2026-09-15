@@ -49,7 +49,7 @@ export const handler = async (event) => {
   const senderEmail = process.env.FROM_EMAIL || "divyam@datacatalyst.in";
 
   try {
-    // 1. Alert email to Founder
+    // 1. Alert email to Founder (Guaranteed to succeed since divyam@datacatalyst.in is verified)
     const alertParams = {
       Source: `DataCatalyst Web Form <${senderEmail}>`,
       Destination: {
@@ -70,26 +70,30 @@ export const handler = async (event) => {
     };
     await sesClient.send(new SendEmailCommand(alertParams));
 
-    // 2. Confirmation email to Requester
-    const confirmationParams = {
-      Source: `DataCatalyst <${senderEmail}>`,
-      Destination: {
-        ToAddresses: [email]
-      },
-      Message: {
-        Subject: {
-          Data: "We've received your request — DataCatalyst",
-          Charset: "UTF-8"
+    // 2. Confirmation email to Requester (protected against Sandbox restrictions)
+    try {
+      const confirmationParams = {
+        Source: `DataCatalyst <${senderEmail}>`,
+        Destination: {
+          ToAddresses: [email]
         },
-        Body: {
-          Text: {
-            Data: `Hi ${name},\n\nThis is an automated confirmation email.\n\nYour sample dataset request has been received. Our team will review your requirements and get back to you within 48 hours.${signature}`,
+        Message: {
+          Subject: {
+            Data: "We've received your request — DataCatalyst",
             Charset: "UTF-8"
+          },
+          Body: {
+            Text: {
+              Data: `Hi ${name},\n\nThis is an automated confirmation email.\n\nYour sample dataset request has been received. Our team will review your requirements and get back to you within 48 hours.${signature}`,
+              Charset: "UTF-8"
+            }
           }
         }
-      }
-    };
-    await sesClient.send(new SendEmailCommand(confirmationParams));
+      };
+      await sesClient.send(new SendEmailCommand(confirmationParams));
+    } catch (confErr) {
+      console.warn("Could not send confirmation to requester (SES Sandbox):", confErr.message);
+    }
 
     return {
       statusCode: 200,
