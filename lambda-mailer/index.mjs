@@ -1,31 +1,6 @@
-import nodemailer from 'nodemailer';
+import { SESClient, SendEmailCommand } from "@aws-sdk/client-ses";
 
-// Configure transporter based on environment variables
-const createTransporter = () => {
-  if (process.env.SMTP_SERVICE === 'gmail' || process.env.GMAIL_USER) {
-    return nodemailer.createTransport({
-      service: 'gmail',
-      auth: {
-        user: process.env.GMAIL_USER || 'divyambhatia2219@gmail.com',
-        pass: process.env.GMAIL_APP_PASSWORD || 'xykykawbgnswixwf'
-      }
-    });
-  }
-
-  // Default to GoDaddy / Custom SMTP
-  return nodemailer.createTransport({
-    host: process.env.SMTP_HOST || 'smtpout.secureserver.net',
-    port: Number(process.env.SMTP_PORT) || 465,
-    secure: Number(process.env.SMTP_PORT) === 587 ? false : true,
-    auth: {
-      user: process.env.SMTP_USER || 'divyam@datacatalyst.in',
-      pass: process.env.SMTP_PASS || 'Jayanshu1@'
-    },
-    tls: {
-      rejectUnauthorized: false
-    }
-  });
-};
+const sesClient = new SESClient({ region: process.env.AWS_REGION || "ap-south-1" });
 
 export const handler = async (event) => {
   const headers = {
@@ -69,26 +44,50 @@ export const handler = async (event) => {
   }
 
   const signature = `\n\n──────────────────────────────\nDivyam Bhatia\nFounder & CEO, DataCatalyst\ndatacatalyst.in\nJaipur, Rajasthan, India\n──────────────────────────────`;
+  const senderEmail = process.env.FROM_EMAIL || "divyam@datacatalyst.in";
 
   try {
-    const transporter = createTransporter();
-    const fromAddress = process.env.FROM_EMAIL || (process.env.GMAIL_USER || 'divyam@datacatalyst.in');
-
-    // 1. Notification email to Founder
-    await transporter.sendMail({
-      from: `"DataCatalyst Web Form" <${fromAddress}>`,
-      to: 'divyam@datacatalyst.in',
-      subject: `New Sample Request from ${name}`,
-      text: `You have a new sample dataset request!\n\nName: ${name}\nEmail: ${email}\nCompany: ${company}\nUse Case: ${use_case || 'Not specified'}\nVolume: ${volume || 'Not specified'}\nNotes: ${notes || ''}${signature}`
-    });
+    // 1. Alert email to Founder
+    const alertParams = {
+      Source: `DataCatalyst Web Form <${senderEmail}>`,
+      Destination: {
+        ToAddresses: ["divyam@datacatalyst.in"]
+      },
+      Message: {
+        Subject: {
+          Data: `New Sample Request from ${name}`,
+          Charset: "UTF-8"
+        },
+        Body: {
+          Text: {
+            Data: `You have a new sample dataset request!\n\nName: ${name}\nEmail: ${email}\nCompany: ${company}\nUse Case: ${use_case || 'Not specified'}\nVolume: ${volume || 'Not specified'}\nNotes: ${notes || ''}${signature}`,
+            Charset: "UTF-8"
+          }
+        }
+      }
+    };
+    await sesClient.send(new SendEmailCommand(alertParams));
 
     // 2. Confirmation email to Requester
-    await transporter.sendMail({
-      from: `"DataCatalyst" <${fromAddress}>`,
-      to: email,
-      subject: "We've received your request — DataCatalyst",
-      text: `Hi ${name},\n\nThis is an automated confirmation email.\n\nYour sample dataset request has been received. Our team will review your requirements and get back to you within 48 hours.${signature}`
-    });
+    const confirmationParams = {
+      Source: `DataCatalyst <${senderEmail}>`,
+      Destination: {
+        ToAddresses: [email]
+      },
+      Message: {
+        Subject: {
+          Data: "We've received your request — DataCatalyst",
+          Charset: "UTF-8"
+        },
+        Body: {
+          Text: {
+            Data: `Hi ${name},\n\nThis is an automated confirmation email.\n\nYour sample dataset request has been received. Our team will review your requirements and get back to you within 48 hours.${signature}`,
+            Charset: "UTF-8"
+          }
+        }
+      }
+    };
+    await sesClient.send(new SendEmailCommand(confirmationParams));
 
     return {
       statusCode: 200,
@@ -96,11 +95,11 @@ export const handler = async (event) => {
       body: JSON.stringify({ success: true })
     };
   } catch (err) {
-    console.error('Failed to send mail:', err);
+    console.error("SES Send Error:", err);
     return {
       statusCode: 500,
       headers,
-      body: JSON.stringify({ error: 'Failed to send email', details: err.message })
+      body: JSON.stringify({ error: "Failed to send email", details: err.message })
     };
   }
 };
