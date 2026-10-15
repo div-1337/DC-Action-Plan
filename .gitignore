@@ -2,3 +2,9 @@ node_modules/
 *.zip
 .DS_Store
 Thumbs.db
+test_clips/
+reports/failures/**/*.wav
+*.wav
+*.mp3
+*.flac
+__pycache__/

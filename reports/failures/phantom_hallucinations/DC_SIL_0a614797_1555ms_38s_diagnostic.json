@@ -1,0 +1,12 @@
+{
+  "error_type": "phantom_hallucinations",
+  "timestamp": "2026-10-15T10:16:09Z",
+  "details": {
+    "provider": "mock_speech_api",
+    "clip": "DC_SIL_0a614797_1555ms_38s.wav",
+    "emitted_text": "\u0939\u093e\u0901 \u092c\u094b\u0932\u093f\u090f",
+    "latency_ms": 109.6,
+    "is_hallucination": true
+  },
+  "triage_audio": "reports\\failures\\phantom_hallucinations\\DC_SIL_0a614797_1555ms_38s.wav"
+}

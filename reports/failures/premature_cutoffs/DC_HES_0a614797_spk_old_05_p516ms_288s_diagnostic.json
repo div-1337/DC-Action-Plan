@@ -1,0 +1,13 @@
+{
+  "error_type": "premature_cutoffs",
+  "timestamp": "2026-10-15T10:17:41Z",
+  "details": {
+    "provider": "mock_speech_api",
+    "clip": "DC_HES_0a614797_spk_old_05_p516ms_288s.wav",
+    "pause_ms": 516,
+    "cutoff_threshold_ms": 450,
+    "premature_cutoff": true,
+    "latency_ms": 155.4
+  },
+  "triage_audio": "reports\\failures\\premature_cutoffs\\DC_HES_0a614797_spk_old_05_p516ms_288s.wav"
+}

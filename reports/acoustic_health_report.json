@@ -1,0 +1,89 @@
+{
+  "generated_at": "2026-10-15T09:56:14Z",
+  "total_files": 3,
+  "total_audio_hours": 1.0,
+  "processing_time_sec": 3.68,
+  "files": [
+    {
+      "file": "combined_0a614797-16d3-428a-94f5-c58beeb5ffd0.wav",
+      "path": "C:\\Users\\manoj\\OneDrive\\Desktop\\desktop old\\hi-conversational audio\\call_0a614797-16d3-428a-94f5-c58beeb5ffd0\\combined_0a614797-16d3-428a-94f5-c58beeb5ffd0.wav",
+      "duration_sec": 1199.64,
+      "sample_rate": 48000,
+      "channels": 2,
+      "format": "WAV",
+      "subtype": "PCM_16",
+      "channel_reports": [
+        {
+          "channel_idx": 0,
+          "peak_dbfs": 0.0,
+          "clipping_pct": 0.0,
+          "rms_dbfs": -20.899999618530273,
+          "noise_floor_dbfs": -140.0,
+          "speech_level_dbfs": -15.69,
+          "estimated_snr_db": 124.31
+        },
+        {
+          "channel_idx": 1,
+          "peak_dbfs": -0.3,
+          "clipping_pct": 0.0,
+          "rms_dbfs": -23.1299991607666,
+          "noise_floor_dbfs": -94.93,
+          "speech_level_dbfs": -17.61,
+          "estimated_snr_db": 77.32
+        }
+      ],
+      "bleed_score_db": -29.0,
+      "status": "PASS",
+      "flags": [],
+      "audit_time_sec": 2.115
+    },
+    {
+      "file": "spk_old_03-0a614797-16d3-428a-94f5-c58beeb5ffd0.wav",
+      "path": "C:\\Users\\manoj\\OneDrive\\Desktop\\desktop old\\hi-conversational audio\\call_0a614797-16d3-428a-94f5-c58beeb5ffd0\\spk_old_03-0a614797-16d3-428a-94f5-c58beeb5ffd0.wav",
+      "duration_sec": 1199.64,
+      "sample_rate": 48000,
+      "channels": 1,
+      "format": "WAV",
+      "subtype": "PCM_16",
+      "channel_reports": [
+        {
+          "channel_idx": 0,
+          "peak_dbfs": 0.0,
+          "clipping_pct": 0.0,
+          "rms_dbfs": -20.899999618530273,
+          "noise_floor_dbfs": -140.0,
+          "speech_level_dbfs": -15.69,
+          "estimated_snr_db": 124.31
+        }
+      ],
+      "bleed_score_db": null,
+      "status": "PASS",
+      "flags": [],
+      "audit_time_sec": 0.763
+    },
+    {
+      "file": "spk_old_05-0a614797-16d3-428a-94f5-c58beeb5ffd0.wav",
+      "path": "C:\\Users\\manoj\\OneDrive\\Desktop\\desktop old\\hi-conversational audio\\call_0a614797-16d3-428a-94f5-c58beeb5ffd0\\spk_old_05-0a614797-16d3-428a-94f5-c58beeb5ffd0.wav",
+      "duration_sec": 1199.76,
+      "sample_rate": 48000,
+      "channels": 1,
+      "format": "WAV",
+      "subtype": "PCM_16",
+      "channel_reports": [
+        {
+          "channel_idx": 0,
+          "peak_dbfs": -0.3,
+          "clipping_pct": 0.0,
+          "rms_dbfs": -23.1299991607666,
+          "noise_floor_dbfs": -94.94,
+          "speech_level_dbfs": -17.61,
+          "estimated_snr_db": 77.32
+        }
+      ],
+      "bleed_score_db": null,
+      "status": "PASS",
+      "flags": [],
+      "audit_time_sec": 0.737
+    }
+  ]
+}
