@@ -40,8 +40,9 @@ This unified approach allows Voice AI builders (targeting OpenAI Realtime, Deepg
    * Real telephony (VoIP, WebRTC, cellular) and dynamic acoustic environments with documented, legally binding contributor consent and automated PII scrubbing.
 
 2. **Dual Ground-Truth Transcription & Diarization Ops**
-   * **Verbatim Transcriptions:** Preserves every filler word, false start, stutter, and breathing sound for accurate acoustic model training and cutoff benchmarking.
-   * **Normalized Ground Truth:** Cleaned, standardized transcriptions (<5–10% WER/CER guaranteed) for semantic accuracy and ASR evaluation.
+   * **The 1-Step Human Verbatim Base Layer:** Transcribers capture raw acoustic reality—preserving every filler word, false start, stutter, and breathing sound with standardized tags (`[filler:haan]`, `[pause]`, `[laughter]`).
+   * **Automated AI/Rule Normalizer (`normalize_transcript.py`):** Programmatically derives the second clean `normalized` ground-truth layer by stripping fillers, collapsing stutters, formatting numeric digits, and applying standard Hindi punctuation.
+   * **Efficiency Impact:** Eliminates double-entry transcription, slashes human turnaround from 30 days to 5 days, and guarantees 100% human ground truth for turn-taking benchmarks alongside clean text for ASR WER evaluation.
    * Millisecond-accurate human-verified speaker diarization and turn timestamping.
 
 3. **Live Human Red-Teaming & "In-The-Wild" Adversarial Calling**
